@@ -11,17 +11,20 @@
 				{
 					"listen": "test",
 					"script": {
+						"id": "aaa59b4c-203e-45b2-bcf3-ab79ba08b655",
 						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});"
 						],
-						"type": "text/javascript",
-						"id": "aaa59b4c-203e-45b2-bcf3-ab79ba08b655"
+						"type": "text/javascript"
 					}
 				}
 			],
-			"_postman_id": "a429409e-7c5b-4cb0-abe7-84b783b784a0",
+			"id": "a429409e-7c5b-4cb0-abe7-84b783b784a0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -30,8 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"location\": {\n    \"lat\": -38.383494,\n    \"lng\": 33.427362\n  },\n  \"accuracy\": 50,\n  \"name\": \"Frontline house\",\n  \"phone_number\": \"(+91) 983 893 3937\",\n  \"address\": \"29, side layout, cohen 09\",\n  \"types\": [\n    \"shoe park\",\n    \"shop\"\n  ],\n  \"website\": \"http://google.com\",\n  \"language\": \"French-IN\"\n}",
-					"options": {}
+					"raw": "{\n  \"location\": {\n    \"lat\": -38.383494,\n    \"lng\": 33.427362\n  },\n  \"accuracy\": 50,\n  \"name\": \"Frontline house\",\n  \"phone_number\": \"(+91) 983 893 3937\",\n  \"address\": \"29, side layout, cohen 09\",\n  \"types\": [\n    \"shoe park\",\n    \"shop\"\n  ],\n  \"website\": \"http://google.com\",\n  \"language\": \"French-IN\"\n}"
 				},
 				"url": {
 					"raw": "https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123",
