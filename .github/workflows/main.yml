@@ -56,29 +56,30 @@ jobs:
           path: testResults
     
     # Send mail after Execution
-       name: Send mail
-       if: always()
-       uses: dawidd6/action-send-mail@v2
-       with:
-       # mail server settings
-       server_address: smtp.gmail.com
-       server_port: 465
+      - name: Send mail
+        if: always()
+        uses: dawidd6/action-send-mail@v2
+        with:
        
-       # user credentials
-       username: ${{ secrets.EMAIL_USERNAME }}
-       password: ${{ secrets.EMAIL_PASSWORD }}
+          # mail server settings
+          server_address: smtp.gmail.com
+          server_port: 465
        
-       # email subject
-       subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          # user credentials
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
        
-       # email body as text
-       body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+         # email subject
+          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+       
+         # email body as text
+          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
        
        # comma-separated string, send email to
-       to: thegavendrathakur@gmail.com
+          to: thegavendrathakur@gmail.com
        
        # from email name
-       from: Shalu Gavendra
+          from: Shalu Gavendra
 
        
        
