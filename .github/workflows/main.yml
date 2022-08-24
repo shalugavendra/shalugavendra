@@ -58,7 +58,7 @@ jobs:
     # Send mail after Execution
       - name: Send mail
         if: always()
-        uses: shalugavendra/action-send-mail@v2
+        uses: shalugavendra/shalugavendra@v2
         with:
        
           # mail server settings
