@@ -45,7 +45,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run Demo.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          newman run ../Postman/Demo.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
 
 
       # Upload the contents of Test Results directory to workspace
@@ -54,37 +54,4 @@ jobs:
         with:
           name: RunReports
           path: testResults
-    
-    # Send mail after Execution
-      - name: Send mail
-        if: always()
-        uses: shalugavendra/shalugavendra@v3
-        with:
-       
-          # mail server settings
-          server_address: smtp.gmail.com
-          server_port: 465
-       
-          # user credentials
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-       
-         # email subject
-          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-       
-         # email body as text
-          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
-       
-       # comma-separated string, send email to
-          to: thegavendrathakur@gmail.com
-       
-       # from email name
-          from: Shalu Gavendra
-
-       
-       
-       
-       
-       
-       
-       
+   
