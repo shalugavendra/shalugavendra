@@ -54,8 +54,9 @@ jobs:
         with:
           name: RunReports
           path: testResults
-     # Send mail after Execution
-     - name: Send mail
+    
+    # Send mail after Execution
+       name: Send mail
        if: always()
        uses: dawidd6/action-send-mail@v2
        with:
